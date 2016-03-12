@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # $parsers and $formatters
 
 ## Overview
@@ -79,3 +80,6 @@ angular
 ```
 
 This will take our model values and display them in uppercase in our field. Combine this with our previous `$parser`, and all our of actual model values will be in lowercase, but displayed in uppercase in our view.
+=======
+# angular-parsers-formatters-readme
+>>>>>>> d12f86ea52dab481b5967fe882efc6da0727778e
