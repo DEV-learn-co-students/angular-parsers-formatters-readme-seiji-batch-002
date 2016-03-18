@@ -14,6 +14,8 @@ Parsers and formatters allow us to have different values in our view and our mod
 
 We can add parsers and formatters by requiring in the `ngModel` controller in our directive.
 
+This can solve some simple issues and save us processing data down the line - for instance, our model might be minutes, but we might want to display the data as hours and minutes. It saves us processing the data later on in our controllers - the data is simply formatted there and then.
+
 ```js
 function changeCase() {
 	return {
@@ -79,3 +81,13 @@ angular
 ```
 
 This will take our model values and display them in uppercase in our field. Combine this with our previous `$parser`, and all our of actual model values will be in lowercase, but displayed in uppercase in our view.
+
+## Using our parsers/formatters
+
+You might have noticed that our directive is restricted to being used as an attribute. This means that we can apply it to any input that we have `ng-model` attached on.
+
+```html
+<input ng-model="ctrl.username" change-case />
+```
+
+By using `change-case`, we add our parsers/formatters to that specific input!
